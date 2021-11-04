@@ -4,12 +4,22 @@ sticky shift for Zsh
 
 ## How to Install
 
-Please use your favorite plugin manager!
+1. Use your favorite plugin manager
 
 For example:
 
 ```sh:zinit
-zinit light 4513echo/zsh-stiky-shift
+zinit light 4513echo/zsh-sticky-shift
+```
+
+2. Manualy install
+
+For example:
+
+```sh
+git clone https://github.com/4513echo/zsh-sticky-shift.git
+echo "source /path/to/sticky-shift.plugin.zsh" >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## How to Configure
