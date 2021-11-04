@@ -2,20 +2,19 @@ STICKY_SHIFT_KEY="${STICKY_SHIFT_KEY:-;}"
 STICKY_TABLE="${STICKY_TABLE:-jis}"
 STICKY_DELAY="${STICKY_DELAY:-1}"
 
-typeset -A jis_table us_table
-jis_table=(
-  '_1' '!' '_2' '"' '_3' '#' '_4' '$' '_5' '%' '_6' '&' '_7' \'
-  '_8' '(' '_9' ')' '_-' '=' '_^' '~' '_¥' '|' '_@' '`' '_[' '{'
-  '_;' '+' '_:' '*' '_]' '}' '_,' '<' '_.' '>' '_/' '?'
-)
-# TODO: support US keyboard
-us_table=(
-
-)
-
 function sticky-shift () {
   local char result old_RBUFFER
-  typeset -A sticky_table special_table
+  typeset -A jis_table us_table sticky_table special_table
+
+  jis_table=(
+    '_1' '!' '_2' '"' '_3' '#' '_4' '$' '_5' '%' '_6' '&' '_7' \'
+    '_8' '(' '_9' ')' '_-' '=' '_^' '~' '_¥' '|' '_@' '`' '_[' '{'
+    '_;' '+' '_:' '*' '_]' '}' '_,' '<' '_.' '>' '_/' '?'
+  )
+  # TODO: support US keyboard
+  us_table=(
+
+  )
 
   if [[ "$STICKY_TABLE" = "jis" ]]; then
     set -A sticky_table ${(kv)jis_table}
