@@ -29,7 +29,7 @@ default: `;`
 
 default: `jis`
 
-**Note:** I don't support US keyboard yet. If you use it, please send me pull request!
+`jis` or `us`
 
 * `STIKY_DELAY`
 
