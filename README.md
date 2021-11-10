@@ -1,6 +1,6 @@
 # zsh-sticky-shift
 
-sticky shift for Zsh
+Sticky shift for Zsh
 
 ## How to Install
 
@@ -12,7 +12,7 @@ For example:
 zinit light 4513echo/zsh-sticky-shift
 ```
 
-2. Manualy install
+2. Manually install
 
 For example:
 
@@ -28,19 +28,19 @@ For example:
 
 ```sh
 export STICKY_SHIFT_KEY="@"
-export STIKY_DELAY=0.3
+export STICKY_DELAY=0.3
 ```
 
 * `STICKY_SHIFT_KEY`
 
 default: `;`
 
-* `STIKY_TABLE`
+* `STICKY_TABLE`
 
 default: `jis`
 
 `jis` or `us`
 
-* `STIKY_DELAY`
+* `STICKY_DELAY`
 
 default: 1 (second)
