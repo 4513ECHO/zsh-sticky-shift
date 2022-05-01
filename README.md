@@ -2,7 +2,7 @@
 
 Sticky shift for Zsh
 
-## How to Install
+## Installation
 
 1. Use your favorite plugin manager
 
@@ -22,25 +22,30 @@ echo "source /path/to/sticky-shift.plugin.zsh" >> ~/.zshrc
 source ~/.zshrc
 ```
 
-## How to Configure
+## Configuration
 
-For example:
+You can change the behavior of this plugin using environment variables:
 
 ```sh
 export STICKY_SHIFT_KEY="@"
 export STICKY_DELAY=0.3
 ```
 
-* `STICKY_SHIFT_KEY`
+- `STICKY_SHIFT_KEY`
 
 default: `;`
 
-* `STICKY_TABLE`
+The key which trigger sticky shift.
+
+- `STICKY_TABLE`
 
 default: `jis`
 
-`jis` or `us`
+The table of keyboard you use. `jis` or `us` are available.
 
-* `STICKY_DELAY`
+- `STICKY_DELAY`
 
-default: 1 (second)
+default: `1` (second)
+
+Timeout for sticky shift. After that time is passed, the plugin stop reading
+char and insert `STICKY_SHIFT_KEY`.
